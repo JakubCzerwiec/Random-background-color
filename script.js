@@ -15,13 +15,13 @@ function changeColor () {
 colorRdn.addEventListener('click', drawColor);
 
 function drawColor () {
-    let draw1 = Math.floor(Math.random() * 16);
-    let draw2 = Math.floor(Math.random() * 16);
-    let draw3 = Math.floor(Math.random() * 16);
+    let draw1 = Math.floor(Math.random() * 160);
+    let draw2 = Math.floor(Math.random() * 160);
+    let draw3 = Math.floor(Math.random() * 160);
 
     let arr = ['#', draw1, draw2, draw3, 1];
     let rndColors = arr.join('');
-    
+
     bodyBcg.style.backgroundColor = rndColors;
 }
     
