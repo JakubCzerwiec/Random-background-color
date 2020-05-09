@@ -13,9 +13,10 @@ function changeColor () {
 
 
 colorRdn.addEventListener('click', drawColor);
-    let arr = ['rgb(',1,')'];
-    let number = [];
+
     function drawColor () {
+            let arr = ['rgb(',1,')'];
+            let number = [];
         for (let i = 0; i < 3; i++) {
             
             let draw = Math.floor(Math.random() * 160);
