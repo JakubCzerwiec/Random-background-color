@@ -13,7 +13,28 @@ function changeColor () {
 
 
 colorRdn.addEventListener('click', drawColor);
+    let arr = ['rgb(',1,')'];
+    let number = [];
+    function drawColor () {
+        for (let i = 0; i < 3; i++) {
+            
+            let draw = Math.floor(Math.random() * 160);
+            
+            number.push(draw);
+        
+            arr.splice(1,1,number);
 
+        }
+        let arr1 = arr.join('');
+        console.log(arr);
+        bodyBcg.style.backgroundColor = arr1;
+        
+        arr = ['rgb(',1,')'];
+        number = [];
+}
+
+
+/*  First attempt, not perfect
 function drawColor () {
     let draw1 = Math.floor(Math.random() * 160);
     let draw2 = Math.floor(Math.random() * 160);
@@ -25,3 +46,5 @@ function drawColor () {
     bodyBcg.style.backgroundColor = rndColors;
 }
     
+*/
+
