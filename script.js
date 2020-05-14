@@ -68,17 +68,3 @@ colorRdn.addEventListener('click', drawColor);
             bodyBcg.style.backgroundColor = hexColor;
         }
         }
-
-
-
-
-
-/* switchBtn.addEventListener('click', () => {
-    if (switchBtn.classList.contains('rgb')) {
-        switchBtn.classList.remove('rgb');
-        switchBtn.classList.add('hex');
-    } else if (switchBtn.classList.contains('hex')) {
-        switchBtn.classList.remove('hex');
-        switchBtn.classList.add('rgb');
-    }
-}) */
