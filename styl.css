@@ -6,6 +6,34 @@ body {
     flex-direction: column;
 }
 
+.switch-box {
+    display: flex;
+    width: 5em;
+    height: 2em;
+    border: 3px solid black;
+    border-radius: 5px;
+    
+}
+
+.switch {
+    height: 2em;
+    width: 2.3em;
+    background-color: red;
+    cursor: pointer;
+}
+
+.rgb {
+    margin-right: auto;
+    margin-left: 0;
+    transform: translateX(0);
+    transition: .5s ease;
+}
+
+.hex {
+    transform: translateX(2.8em);
+    transition: .5s ease;
+}
+
 .colorBtn, .colorRdn {
     padding: 1em;
     border: 3px solid white;
@@ -20,6 +48,16 @@ body {
     width: 20em;
 }
 
+.txt {
+    font-size: 1.5em;
+}
+
+.colorName {
+    padding: 1em;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
 .colorBtn:hover {
     background: black;
 }
@@ -27,3 +65,4 @@ body {
 .colorRdn:hover {
     background: black;
 }
+
