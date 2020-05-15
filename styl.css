@@ -20,9 +20,6 @@ body {
     width: 2.3em;
     background-color: red;
     cursor: pointer;
-}
-
-.rgb {
     margin-right: auto;
     margin-left: 0;
     transform: translateX(0);

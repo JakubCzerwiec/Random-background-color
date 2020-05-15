@@ -10,12 +10,9 @@ const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
 const colors = ['yellow', 'red', 'green', '#3b5998'];
 
 switchBtn.addEventListener('click', () => {
-    if (switchBtn.getAttribute('class') == 'switch rgb') {
-        switchBtn.setAttribute('class', 'switch hex')
-    } else {
-        switchBtn.setAttribute('class', 'switch rgb')
+    switchBtn.classList.toggle('hex');
     }
-})
+)
 
 
 colorBtn.addEventListener('click', changeColor);
@@ -34,7 +31,17 @@ colorRdn.addEventListener('click', drawColor);
 
     function drawColor () {
 
-        if (switchBtn.classList.contains('rgb')) {
+        if (switchBtn.classList.contains('hex')) {
+            let hexColor = '#';
+            for (let i = 0; i < 6; i++) {
+                let randomNumber = Math.floor(Math.random() * hex.length)
+                hexColor += hex[randomNumber]
+            }
+            colorName.textContent = hexColor;
+            bodyBcg.style.backgroundColor = hexColor;
+        }
+
+        else {
             let arr = ['rgb(',1,')'];
             let number = [];
             
@@ -58,13 +65,5 @@ colorRdn.addEventListener('click', drawColor);
 
             colorName.textContent = arr1;
 
-        } else if (switchBtn.classList.contains('hex')) {
-            let hexColor = '#';
-            for (let i = 0; i < 6; i++) {
-                let randomNumber = Math.floor(Math.random() * hex.length)
-                hexColor += hex[randomNumber]
-            }
-            colorName.textContent = hexColor;
-            bodyBcg.style.backgroundColor = hexColor;
-        }
+        } 
         }
